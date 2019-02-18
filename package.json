@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "node index.js",
-    "run": "node index.js"
+    "run": "node index.js",
+    "start":"node app.js"
   },
   "author": "redcode9000",
   "license": "ISC",
