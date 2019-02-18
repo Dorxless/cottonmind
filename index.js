@@ -3,7 +3,7 @@ const port=process.env.PORT || 3000
 const server = http.createServer((req, res) => {
 res.statusCode = 200;
 res.setHeader('Content-Type', 'text/html');
-res.end('<h1>Hello World</h1>');
+res.end('<h1>Hello World2</h1>');
 });
 server.listen(port,() => {
 console.log("hello")
@@ -34,14 +34,6 @@ Bot.on('message', (msg) => {
       });
   }else if(msg.chat.id != settings.myId && msg.text == '/start'
     ){
-      Bot.sendMessage(msg.chat.id, `Welcome !!
-
-Any message you send will be delivered to the bot owner
-.
-.
-Don't worry , your identity won't be known so you can talk freely 
-.
-.
-Follow us on @CottonMinds`)
+      Bot.sendMessage(msg.chat.id, settings.welcomeMsg)
     }
 });
