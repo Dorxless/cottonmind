@@ -6,7 +6,7 @@ res.setHeader('Content-Type', 'text/html');
 res.end('<h1>Hello World</h1>');
 });
 server.listen(port,() => {
-console.log(Server running at port +port);
+console.log("hello")
 });
 //Require:
 const api = require('node-telegram-bot-api');
