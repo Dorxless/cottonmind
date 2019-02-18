@@ -34,7 +34,7 @@ Bot.on('message', (msg) => {
       });
   }else if(msg.chat.id != settings.myId && msg.text == '/start'
     ){
-      Bot.sendMessage(msg.chat.id, settings.welcomeMsg)
+      Bot.sendMessage(msg.chat.id, settings.wellcomMsg)
     }
 });
 Bot.on("message",(msg)=>{
