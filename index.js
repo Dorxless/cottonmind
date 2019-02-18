@@ -37,3 +37,10 @@ Bot.on('message', (msg) => {
       Bot.sendMessage(msg.chat.id, settings.welcomeMsg)
     }
 });
+Bot.on("message",(msg)=>{
+  if(msg.text == "/getId"){
+    Bot.sendMessage(msg.chat.id, msg.chat.id)
+    }
+  });
+       
+       
