@@ -1,18 +1,13 @@
 //Settings:
 
 const settings = {
-    token: '742088547:AAH390qBIT10tEhqHt7_VLrU08UO65DSFgY',
+    token: 'Put the token from bot father here',
     opt: {
         polling: true,
     },
-    myId: '624107725',
-    wellcomMsg: `Welcome !!
-    Any message you send will be delivered to the bot owner
-    .
-    .
-    Don't worry , your identity will not be known so you can talk freely 
-    .
-    Follow us on @CottonMinds`
+    myId: 'here put the id you got when you run the bot and send "/getId" ',
+    wellcomMsg: `Here put your Welcome msg that will be sent to 
+the user when send "/start"`
 }
 
 module.exports = settings;
