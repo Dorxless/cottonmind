@@ -16,9 +16,3 @@ const settings = {
 }
 
 module.exports = settings;
-
-//Blockers token: 742088547:AAH390qBIT10tEhqHt7_VLrU08UO65DSFgY
-//My token : 786370852:AAGjiV6UpUZbXiYGEDIIHgF4wWLiBV6DBzM
-
-//Blocker Id : '624107725'
-//My Id : '682236828'
