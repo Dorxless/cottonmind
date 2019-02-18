@@ -11,7 +11,7 @@ const settings = {
 Any message you send will be delivered to the bot owner
 .
 .
-Don't worry , your identity won't be known so you can talk freely 
+Don't worry , your identity will be coverd so you can talk freely 
 .
 .
 Follow us on @CottonMinds`
