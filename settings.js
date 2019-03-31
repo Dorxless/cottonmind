@@ -15,7 +15,7 @@ Don't worry , your identity will be coverd so you can talk freely
 .
 .
 Follow us on @CottonMinds`,
-    sentMsg:'Your Message Was Delivered, Please be patient 😊'
+    sentMsg:'Your Message Was Delivered, Please be patient'
 }
 
 module.exports = settings;
