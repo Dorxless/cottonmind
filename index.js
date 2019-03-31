@@ -21,7 +21,7 @@ const Bot = new api(settings.token, settings.opt);
 //When the user start:
 Bot.on('message', (msg) => {
   if (msg.chat.id != settings.myId && msg.text != '/start'){
-    Bot.sendMessage(msg.chat.id, "Your Message Was Delivered");
+    Bot.sendMessage(msg.chat.id, settings.sentMsg);
     Bot.sendMessage(settings.myId, msg.text, {
       reply_markup: {
         force_reply: true
