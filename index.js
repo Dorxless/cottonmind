@@ -29,13 +29,14 @@ Bot.on('message', (msg) => {
         force_reply: true
       }
     	})
-    	}
-    });
-      .then(reply=>{
+.then(reply=>{
         Bot.onReplyToMessage(reply.chat.id, reply.message_id,  msg2 => {
           Bot.sendMessage(msg.chat.id, msg2.text);
         });
       });
+    	}
+    });
+      
   }else if(msg.chat.id != settings.myId && msg.text == '/start'
     ){
       Bot.sendMessage(msg.chat.id, settings.wellcomMsg)
