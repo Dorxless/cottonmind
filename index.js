@@ -28,7 +28,7 @@ const Bot = new api(settings.token, settings.opt);
 
 //When the user start:
 Bot.on('message', (msg) => {
-  if (!checkNotAdmin(msg.chat.id) && msg.text != '/start'){
+  if (checkNotAdmin(msg.chat.id) && msg.text != '/start'){
     Bot.sendMessage(msg.chat.id, settings.sentMsg);
     settings.admins.forEach(admin=>{
     if(admin.send){
@@ -45,7 +45,7 @@ Bot.on('message', (msg) => {
     	}
     });
       
-  }else if(!checkNotAdmin(msg.chat.id)  && msg.text == '/start'
+  }else if(checkNotAdmin(msg.chat.id)  && msg.text == '/start'
     ){
       Bot.sendMessage(msg.chat.id, settings.wellcomMsg)
     }
