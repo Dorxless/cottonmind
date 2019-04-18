@@ -8,6 +8,14 @@ res.end('<h1>Hello World</h1>');
 server.listen(port,() => {
 console.log("hello")
 });
+
+const checkNotAdmin = (id)=>{
+	const ids = [];
+	settings.admins.forEach(a=>ids.push(a.id));
+	if(ids.includes(id)) return true;
+	else return false
+}
+
 //Require:
 const api = require('node-telegram-bot-api');
 
@@ -20,7 +28,7 @@ const Bot = new api(settings.token, settings.opt);
 
 //When the user start:
 Bot.on('message', (msg) => {
-  if (settings.admins.forEach(a=>a.id != msg.chat.id)  && msg.text != '/start'){
+  if (!checkNotAdmin(msg.chat.id) && msg.text != '/start'){
     Bot.sendMessage(msg.chat.id, settings.sentMsg);
     settings.admins.forEach(admin=>{
     if(admin.send){
@@ -37,7 +45,7 @@ Bot.on('message', (msg) => {
     	}
     });
       
-  }else if(!settings.admins.includes(msg.chat.id)  && msg.text == '/start'
+  }else if(!checkNotAdmin(msg.chat.id)  && msg.text == '/start'
     ){
       Bot.sendMessage(msg.chat.id, settings.wellcomMsg)
     }
