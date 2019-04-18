@@ -22,11 +22,15 @@ const Bot = new api(settings.token, settings.opt);
 Bot.on('message', (msg) => {
   if (msg.chat.id != settings.myId && msg.text != '/start'){
     Bot.sendMessage(msg.chat.id, settings.sentMsg);
-    Bot.sendMessage(settings.myId, msg.text, {
+    settings.admins.forEach(admin=>{
+    if(admin.send){
+    Bot.sendMessage(admin.id, msg.text, {
       reply_markup: {
         force_reply: true
       }
-    })
+    	})
+    	}
+    });
       .then(reply=>{
         Bot.onReplyToMessage(reply.chat.id, reply.message_id,  msg2 => {
           Bot.sendMessage(msg.chat.id, msg2.text);
@@ -42,5 +46,4 @@ Bot.on("message",(msg)=>{
     Bot.sendMessage(msg.chat.id, msg.chat.id)
     }
   });
-       
        
