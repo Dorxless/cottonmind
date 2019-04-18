@@ -20,7 +20,7 @@ const Bot = new api(settings.token, settings.opt);
 
 //When the user start:
 Bot.on('message', (msg) => {
-  if (!settings.admins.includes(msg.chat.id)  && msg.text != '/start'){
+  if (settings.admins.forEach(a=>a.id != msg.chat.id)  && msg.text != '/start'){
     Bot.sendMessage(msg.chat.id, settings.sentMsg);
     settings.admins.forEach(admin=>{
     if(admin.send){
@@ -47,4 +47,3 @@ Bot.on("message",(msg)=>{
     Bot.sendMessage(msg.chat.id, msg.chat.id)
     }
   });
-       
