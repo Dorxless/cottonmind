@@ -5,9 +5,17 @@ const settings = {
     opt: {
         polling: true,
     },
-    myId: '624107725',
+    admins: [
+    			{
+    				id:'624107725',
+    				send:true
+    			},
+    			{
+    				id:"",
+    				send:true
+    			}
+    		],
     wellcomMsg: `Welcome !!
-
 Any message you send will be delivered to the bot owner
 .
 .
