@@ -49,6 +49,7 @@ Bot.on('message', (msg) => {
     ){
       Bot.sendMessage(msg.chat.id, settings.wellcomMsg)
     }
+else if(!checkNotAdmin)Bot.sendMessage(msg.chat.id, "You are admin");
 });
 Bot.on("message",(msg)=>{
   if(msg.text == "/getId"){
