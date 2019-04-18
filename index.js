@@ -37,7 +37,7 @@ Bot.on('message', (msg) => {
     	}
     });
       
-  }else if(msg.chat.id != settings.myId && msg.text == '/start'
+  }else if(!settings.admins.includes(msg.chat.id)  && msg.text == '/start'
     ){
       Bot.sendMessage(msg.chat.id, settings.wellcomMsg)
     }
